@@ -29,36 +29,33 @@ Program
 import numpy as np
 import matplotlib.pyplot as plt
 
-Am=5
-Ac=10
-fm=404
-fc=4040
-fs=40400
-mu=0.8
-t=np.arange(0,3/fm,1/fs)
-m=Am*np.cos(2*np.pi*fm*t)
-c=Ac*np.cos(2*np.pi*fc*t)
-eAM=Ac*(1+mu*(m/Am))*np.cos(2*np.pi*fc*t)
-plt.subplot(3,1,1)
-plt.plot(t,m)
-plt.grid()
-plt.subplot(3,1,2)
-plt.plot(t,c)
-plt.grid()
-plt.subplot(3,1,3)
-plt.plot(t,eAM)
-plt.grid()
+Am = 2.6
+fm = 154
+Ac = 5.2
+fc = 1540
+fs = 15400
 
-plt.tight_layout()
-plt.show()
-
+t = np.arange(0, 2/fm, 1/fs)
+m = Am * np.cos(2 * np.pi * fm * t)
+plt.subplot(3, 1, 1)
+plt.plot(t, m)
+c = Ac * np.cos(2 * np.pi * fc * t)
+plt.subplot(3, 1, 2)
+plt.plot(t, c)
+s = (Ac + m) * np.cos(2 * np.pi * fc * t)
+plt.subplot(3, 1, 3)
+plt.plot(t, s)
 ```
 
 Output Waveform
 
+<img width="932" height="652" alt="image" src="https://github.com/user-attachments/assets/f2b2759a-81a3-4c01-b14b-420a0153d928" />
 
 
 Tabular Column
+
+![WhatsApp Image 2025-12-04 at 15 38 34_ad8f101b](https://github.com/user-attachments/assets/da97f2d2-2f76-4af3-97e6-e083616aaba0)
+
 
 
 
